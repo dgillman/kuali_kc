@@ -283,7 +283,15 @@
 		<servlet-name>attachment</servlet-name>
 		<servlet-class>org.kuali.rice.kew.notes.web.AttachmentServlet</servlet-class>
 	</servlet>
-	
+	<servlet>
+	    <servlet-name>HR Import REST Service</servlet-name>
+	    <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
+	    <init-param>
+	      <param-name>com.sun.jersey.config.property.packages</param-name>
+	      <param-value>com.rsmart.kuali.coeus.hr.rest</param-value>
+	    </init-param>
+	    <load-on-startup>1</load-on-startup>
+	</servlet>
 	<!--  
 	
 		Following servlet and servlet mapping for the PostDataLoadEncryptionServlet are commented out.
@@ -339,7 +347,12 @@
 		<servlet-name>attachment</servlet-name>
 		<url-pattern>/kew/attachment/*</url-pattern>
 	</servlet-mapping>
-
+	
+	<servlet-mapping>
+		<servlet-name>HR Import REST Service</servlet-name>
+		<url-pattern>/hr-import/*</url-pattern>
+	</servlet-mapping>
+	
 	<session-config>
 		<session-timeout>60</session-timeout>
 	</session-config>
