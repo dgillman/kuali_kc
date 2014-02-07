@@ -1295,12 +1295,6 @@
 	    	<groupId>com.rsmart.kuali</groupId>
 	    	<artifactId>kc_hr_rest</artifactId>
 	    	<version>0.1-SNAPSHOT</version>
-                <exclusions>
-                    <exclusion>
-                        <artifactId>commons-logging</artifactId>
-                        <groupId>commons-logging</groupId>
-                    </exclusion>
-                </exclusions>
 	    </dependency>
 	</dependencies>
 
